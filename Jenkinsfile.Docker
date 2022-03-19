@@ -1,0 +1,31 @@
+pipeline{
+    agent any
+    environment{
+        imagename = 'helloworld'
+    }
+        stages{
+            stage('clone'){
+                steps{
+                    checkout scm
+                }
+            }
+            stage('Testt'){
+                steps{
+                    sh 'echo TESTING'
+                }
+            }
+            stage('install'){
+                steps{
+                    script{
+                    docker.build imagename
+                    }
+                }
+            }
+            stage("build"){
+                steps{
+                    sh 'echo BUILDING'
+                }
+            }
+            
+        }
+}
