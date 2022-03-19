@@ -24,7 +24,7 @@ pipeline{
                 steps{
                     sh 'echo PUBLISHING'
                     // sh 'VARIALBE ${WORKSPACE}'
-                    sh 'scp -r /var/jenkins_home/workspace/jenkins-react/build/* ubuntu@3.111.23.153:/home/ubuntu/react-appp'
+                    sh 'scp -r /var/jenkins_home/workspace/jenkins-react/build ubuntu@3.111.23.153:/home/ubuntu/react-appp'
                 }
             }   
     }
