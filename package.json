@@ -43,7 +43,8 @@
     "build": "react-scripts build",
     "test": "react-scripts build && babel-node server",
     "server": "babel-node server",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start":"react-scripts start"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
